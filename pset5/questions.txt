@@ -1,0 +1,27 @@
+0.  pneumonoultramicroscopicsilicovolcanoconiosis 
+is the longest English word in a dictionary. 
+It is a coined term for a pneumoconiosis caused by 
+inhalation of very fine silicate or quartz dust.
+
+1.  getrusage returns resource usage measures for the calling 
+process, the children of the calling process, or a single 
+calling thread.
+2.  There are 16 members in a variable of type struct rusage.
+3.  Passing before and after by reference allows us to store the return value of getrusage to the address of before or after.
+4.  the main function in speller.c individually scans each letter from the text using fgetc
+allowing it to ignore words that contain invalid characters such as numbers. If a word contains a valid letter, 
+the letter is appended to a char array and the index increases by 1. This continues until a space, tab 
+or newline occurs. If an invalid character is encountered, the index is reset to 0 and the rest of 
+the string is consumed.
+5.  Relying on fscanf alone would not allow the program to filter out invallid characters.
+6.  The parameters were declared as constants to prevent their values from being changed by the function.
+7.  The program implements a hashtable of size [8192]. 
+Each struct node contains a word (stored as a char array)
+and a node*pointer. The word contained in the node is hashed
+and stored in the array. In the case of a collision, the new
+node will append to the linked list at the hashed index.
+8.  The first time the code worked correctly, the runtime was .68 seconds
+9.  Choosing a fast hash function improved the speed greatly. In 
+addition, optimizing the size of the array to reduce the linear 
+search time improved the speed of the program.
+10. I was unable to decrease load time below 5 seconds. 

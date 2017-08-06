@@ -1,0 +1,45 @@
+0.  
+BMP: 16 Million (24 bits/pixel)
+GIF: 256 (8 bits/pixel)
+PNG: 256 Teracolors (48 bits/pixel)
+JPEG: 16 Million (24 bits/pixel)
+
+1.  GIF supports animation
+
+2.  Lossy compression deletes information, while lossless compression allows information to be recovered when the file is decompressed.
+
+3.  JPEG uses lossy compression.
+
+4.  The FAT is a directory of linked file clusters on a hard drive. Each entry in the FAT describes a cluster as a part of a file with a pointer to the next part, the last cluster in a file, free space, or defective. When a file is deleted in a FAT system, its name in its first directory entry is modified to show that it is deleted. Then all of the clusters in that file are listed as free space. The actual data is never touched.
+
+5.  Overwriting the files by filling the free space with null or random characters ensures that files cannot be recovered.
+
+6.  stdint.h is a library of new intger types to guarantee that integers have the same size across systems when implemented.
+
+7.  The use of uint8_t, uint32_t, int32_t, and uint16_t guarantees that the size of objeccts of those filetypes will always contain the same number of bits across implementations.
+
+8  The filetypes BYTE, DWORD, LONG, and WORD have the specified filesizes of 8 bits (1 byte), 32 bits(4 bytes), 32 bits(4 bytes), and 16 bits (2 bytes) respectively.
+
+9.  The first two bytes of a BMP is the bfType value 'BM', which is part of the BITMAPFILEHEADER.
+
+10. bfSize contains the size of the entire file, including headers, while biSize is the size of the image only.
+
+11. If biHeight is negative, the bitmap is a top-down DIB and its origin is the upper-left corner.
+
+12. biBitCount specifies the BMP’s color depth
+
+13. One reason it might return null is if there is not enough free memory for the file.
+
+14. The third argument to fread() is always 1 because we are iterating through the file one data element (RGBTRIPLE) at a time.
+
+15. int padding =  (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
+= (4-(3*24%4)%4)
+=(4-(72%4)%4)
+=(4-(0)%4)
+=4
+
+16. fseek sets the position indicator  to a new position
+
+17. SEEK_CUR specifies that the offset is relative to the beginning of the current file structure.
+
+18. umm, Rick Astley?
